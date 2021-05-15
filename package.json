@@ -1,37 +1,56 @@
 {
-  "name": "react-typescript-template",
-  "version": "1.0.0",
-  "description": "A react typescript template to kickstart your react project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tap0212/react-typescript-template.git"
-  },
-  "keywords": [
-    "react",
-    "typescript",
-    "redux"
-  ],
-  "author": "tap0212 (https://github.com/tap0212)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tap0212/react-typescript-template/issues"
-  },
-  "homepage": "https://github.com/tap0212/react-typescript-template#readme",
-  "dependencies": {
-    "@types/react": "^17.0.5",
-    "@types/react-dom": "^17.0.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "typescript": "^4.2.4"
-  },
-  "devDependencies": {
-    "html-webpack-plugin": "^5.3.1",
-    "ts-loader": "^9.1.2",
-    "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0"
-  }
+    "name": "react-typescript-template",
+    "version": "1.0.0",
+    "description": "A react typescript template to kickstart your react project",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tap0212/react-typescript-template.git"
+    },
+    "keywords": [
+        "react",
+        "typescript",
+        "redux"
+    ],
+    "author": "tap0212 (https://github.com/tap0212)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/tap0212/react-typescript-template/issues"
+    },
+    "homepage": "https://github.com/tap0212/react-typescript-template#readme",
+    "dependencies": {
+        "@types/react": "^17.0.5",
+        "@types/react-dom": "^17.0.5",
+        "husky": "^6.0.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "typescript": "^4.2.4"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.23.0",
+        "@typescript-eslint/parser": "^4.23.0",
+        "eslint": "^7.26.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.23.2",
+        "html-webpack-plugin": "^5.3.1",
+        "prettier": "^2.3.0",
+        "ts-loader": "^9.1.2",
+        "webpack": "^5.37.0",
+        "webpack-cli": "^4.7.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,ts,tsx}": [
+            "eslint --fix"
+        ]
+    }
 }
