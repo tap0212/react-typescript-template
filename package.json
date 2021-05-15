@@ -1,0 +1,37 @@
+{
+  "name": "react-typescript-template",
+  "version": "1.0.0",
+  "description": "A react typescript template to kickstart your react project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tap0212/react-typescript-template.git"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "redux"
+  ],
+  "author": "tap0212 (https://github.com/tap0212)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tap0212/react-typescript-template/issues"
+  },
+  "homepage": "https://github.com/tap0212/react-typescript-template#readme",
+  "dependencies": {
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.1",
+    "ts-loader": "^9.1.2",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0"
+  }
+}
