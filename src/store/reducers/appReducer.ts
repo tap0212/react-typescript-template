@@ -3,27 +3,21 @@
  * App reducer
  *
  */
+import { PayloadAction } from '@reduxjs/toolkit';
 import produce from 'immer';
 import { createActions } from 'reduxsauce';
 
 export const { Types: AppTypes, Creators: AppCreators } = createActions({
-    greet: ['payload'],
+    sample: ['payload'],
 });
-export type AppStateType = {
-    greet: string;
-};
-export const initialState: AppStateType = { greet: 'hello' };
+export type appStateType = {};
+export const initialState: appStateType = {};
 
-/* eslint-disable default-case, no-param-reassign */
-export const homeContainerReducer = (
-    state: AppStateType = initialState,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    action: { type: any; payload: any },
-): AppStateType =>
-    produce(state, (draft) => {
+export const homeContainerReducer = (state: appStateType = initialState, action: PayloadAction): appStateType =>
+    produce(state, (/* draft */) => {
         switch (action.type) {
-            case AppTypes.GREET:
-                draft.greet = action.payload;
+            case AppTypes.SAMPLE:
+                state;
                 break;
         }
     });

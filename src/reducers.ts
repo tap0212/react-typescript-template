@@ -3,10 +3,10 @@
  */
 
 import { combineReducers, Reducer } from 'redux';
-import App, { AppStateType, initialState as AppInitialState } from 'store/reducers/appReducer';
+import App, { appStateType, initialState as AppInitialState } from 'store/reducers/appReducer';
 
 export interface ApplicationState {
-    App: AppStateType;
+    App: appStateType;
 }
 export const ApplicationInitialState = {
     App: AppInitialState,
