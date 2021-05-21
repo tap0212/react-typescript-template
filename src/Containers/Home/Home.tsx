@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router-dom';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
+import { Wrapper } from './Styles';
 interface StateProps {
     sample: string;
 }
@@ -14,7 +15,7 @@ interface DispatchProps {
 type Props = RouteComponentProps;
 export type PropsType = StateProps & DispatchProps & Props;
 const Home = (props: PropsType) => {
-    return <div onClick={props.dispatchSetSample}>Hello world from Home!</div>;
+    return <Wrapper>Hello!</Wrapper>;
 };
 
 const mapStateToProps = createStructuredSelector({

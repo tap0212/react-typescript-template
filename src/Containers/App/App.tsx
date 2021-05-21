@@ -9,9 +9,10 @@ import { makeSelectApp } from '@/store/selectors/appSelectors';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import { compose, Action } from 'redux';
-import { THEME } from '@/themes/colors';
+import { THEME } from '@/styling/colors';
 import Home from '@/Containers/Home';
 import NotFoundPage from '@/Containers/NotFoundPage';
+import Header from '@/Components/Header';
 interface StateProps {}
 interface DispatchProps {}
 type Props = StateProps & DispatchProps;
@@ -20,6 +21,7 @@ const App: React.FC = (props: Props) => {
     return (
         <ThemeProvider theme={THEME}>
             <Layout.Content>
+                <Header title="The TypeScript React Template" />
                 <Switch>
                     <Route exact={true} path={'/'} component={Home} />
                     <Route path="*" exact={true} component={NotFoundPage} />
