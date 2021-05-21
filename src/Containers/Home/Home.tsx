@@ -12,7 +12,7 @@ interface DispatchProps {
     dispatchSetSample: () => void;
 }
 type Props = RouteComponentProps;
-type PropsType = StateProps & DispatchProps & Props;
+export type PropsType = StateProps & DispatchProps & Props;
 const Home = (props: PropsType) => {
     return <div onClick={props.dispatchSetSample}>Hello world from Home!</div>;
 };
