@@ -24,5 +24,6 @@ const mapStateToProps = createStructuredSelector({
 const mapDispatchToProps = {
     dispatchSetSample: () => HomeCreators.sample(),
 };
-const withConnect = connect<StateProps, DispatchProps>(mapStateToProps, mapDispatchToProps);
-export default compose(withConnect, memo)(Home);
+
+const withConnect = connect<StateProps, DispatchProps, Props>(mapStateToProps, mapDispatchToProps);
+export default compose<React.FC<PropsType>>(withConnect, memo)(Home);
